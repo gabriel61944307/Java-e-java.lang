@@ -1,0 +1,18 @@
+package br.com.bytebank.banco.especial;
+
+import br.com.bytebank.banco.model.Conta;
+
+public class ContaEspecial extends Conta {
+	
+	public ContaEspecial(int agencia, int numero) {
+		// passando agencia e numero para o construtor da classe mãe pois apenas o construtor padrão é herdado automaticamente
+		super(agencia, numero);
+	}
+	
+	@Override
+	public void deposita(double valor) {
+		super.saldo += valor;
+
+	}
+
+}
